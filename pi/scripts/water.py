@@ -2,6 +2,17 @@
 import RPi.GPIO as GPIO
 import datetime
 import time
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="34.89.20.156",
+  user="root",
+  password="root",
+  database="project"
+)
+
+mycursor = mydb.cursor()
+
 
 init = False
 
@@ -31,9 +42,11 @@ def auto_water(delay = 5, pump_pin = 7, water_sensor_pin = 8):
         while 1 and consecutive_water_count < 10:
             time.sleep(delay)
             wet = get_status(pin = water_sensor_pin) == 0
+            add_to_db()
             if not wet:
                 if consecutive_water_count < 5:
                     pump_on(pump_pin, 1)
+                    add_to_db()
                 consecutive_water_count += 1
             else:
                 consecutive_water_count = 0
@@ -48,4 +61,10 @@ def pump_on(pump_pin = 7, delay = 1):
     GPIO.output(pump_pin, GPIO.LOW)
     time.sleep(1)
     GPIO.output(pump_pin, GPIO.HIGH)
-    
+    add_to_db()
+
+
+def add_to_db():
+    sql = "INSERT INTO data (data) VALUES (%s)"
+    date_time = datetime.datetime
+    mycursor.execute(sql, date_time)

@@ -26,7 +26,6 @@ border: solid black 1px;
 font-size: 70px;
 }
 
-
 #water-on{
 background: blue;
 }
@@ -70,4 +69,29 @@ border: solid black 1px;
   align-self: centre;
   background-image: linear-gradient(#F7F7F7, #D6D6D6);
   z-index: 999;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 18px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
