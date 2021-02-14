@@ -1,0 +1,73 @@
+html {
+background: lightgrey;
+}
+
+nav{
+text-align: center;
+}
+
+.btn-container{
+float:left;
+margin-right: 250px;
+}
+
+li{
+    list-style-type: none;
+    float: right;
+    padding: 10px;
+    }
+
+
+
+.btn-container button{
+width: 500px;
+height:500px;
+border: solid black 1px;
+font-size: 70px;
+}
+
+
+#water-on{
+background: blue;
+}
+
+#water-off{
+background: green;
+}
+
+#soil-status{
+background: orange;
+}
+
+#water-once{
+background: purple;
+}
+
+#check-last{
+background: pink;
+}
+
+#check-history{
+background: yellow;
+}
+
+#help{
+z-index: 99999999;
+width: 500px;
+height:500px;
+border: solid black 1px;
+}
+
+.menu{
+  position: fixed;
+  display: none;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 50vw;
+  height: 50vh;
+  border: black;
+  border-style: solid;
+  align-self: centre;
+  background-image: linear-gradient(#F7F7F7, #D6D6D6);
+  z-index: 999;
+}

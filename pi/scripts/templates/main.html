@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<title>{{ title }}</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+	<nav>
+		<h1>PLANT HELPLINE</h1>
+		<h2>The date and time on the server is: {{ time }}</h2>
+		<h2> {{ text }} </h2>
+		<button id="help-btn">Help</button>
+	</nav>
+
+	<div class="btn-container">
+		<ul>
+			<li><a href="/auto/water/OFF"><button id="water-off">Turn OFF Auto Watering</button></a></li>
+			<li><a href="/auto/water/ON"><button id="water-on" >Turn ON Auto Watering</button></a></li>
+			<li><a href="/sensor"><button id="soil-status">Check Soil Status</button></a> <br></li>
+			<li><a href="/water"><button id="water-once">Water Once</button></a></li>
+			<li><a href="/last_watered"><button id="check-last">Check Time Last Watered</button></a></li>
+			<li><a href="/last_watered"><button id="check-history">Check History</button></a></li>
+		</ul>
+	</div>
+
+	<div id="help" class="menu">
+        <header class="modal-header">
+            <div class="modal-left-container">
+                <a href="javascript:void(0)" class="close-modal-button" id="close">&times;</a>
+            </div>
+        </header>
+
+		<h1>Help window</h1>
+    </div>
+
+
+	<script src="//code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
